@@ -19,13 +19,11 @@ const Card: React.FC = () => {
     <div>
       {cart.map(({ objectID, name, salePrice }) => (
         <div className="flex" key={objectID}>
-          <h3 className="text-3xl text-gray-900">{name}</h3>
+          <h3 className="text-gray-900">{name}</h3>
           <div>
-            <span className="text-3xl font-bold text-gray-900 mx-1">
-              ${salePrice}
-            </span>
-            <span className="text-1xl font-bold text-gray-900">
-              Disount ${sum >= 200 && salePrice >= 250 ? salePrice / 2 : 0}
+            <span className="font-bold text-gray-900 mx-1">$ {salePrice}</span>
+            <span className="font-bold text-gray-900">
+              Disount $ {sum >= 200 && salePrice >= 250 ? salePrice / 2 : 0}
             </span>
           </div>
         </div>
@@ -33,7 +31,7 @@ const Card: React.FC = () => {
 
       <div>
         <h3 className="text-3xl font-bold">
-          Total: <span>${total}</span>
+          Total: <span>$ {total.toFixed(2)}</span>
         </h3>
       </div>
     </div>

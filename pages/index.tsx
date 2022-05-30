@@ -13,6 +13,7 @@ const Home: React.FC = () => {
   return (
     <Layout title="Shop">
       <InstantSearch indexName="bestbuy" searchClient={searchClient}>
+        <p>Sorry pour le design, j'ai tenté tailwind et j'ai fail!!!!</p>
         <Search />
       </InstantSearch>
     </Layout>
