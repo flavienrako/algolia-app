@@ -28,17 +28,19 @@ const Card: React.ComponentType<{ hit: Hit<ProductType> }> = ({ hit }) => {
         alt="product image"
       />
       <div className="px-5 pb-5">
-        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="font-semibold tracking-tight text-gray-900 dark:text-white">
           <Highlight attribute="name" hit={hit} />
         </h5>
 
         <div className="">
-          <span className="text-3xl font-bold text-gray-900 dark:text-white mx-1">
+          <span className="font-bold text-gray-900 dark:text-white mx-1">
             ${hit.salePrice}
           </span>
+          <br />
+          Disount
           <span className="text-1xl font-bold text-gray-900 dark:text-white">
-            Disount $
-            {sum >= 200 && hit.salePrice >= 250 ? hit.salePrice / 2 : 0}
+            {" "}
+            ${sum >= 200 && hit.salePrice >= 250 ? hit.salePrice / 2 : 0}
           </span>
           <div>
             <Button onClick={toggleCart}>
